@@ -98,7 +98,7 @@ public class SysUserController {
      *
      * @return 用户信息
      */
-    @GetMapping("getInfo")
+    @GetMapping("/getInfo")
     public Result getInfo(HttpServletRequest request) {
         String token = request.getHeader("Authorization");
         String id = JwtUtils.getString(token, "id");

@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -80,6 +81,7 @@ public class SysUser implements Serializable {
     /**
      * 最后登录时间
      */
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     @TableField(value = "login_date", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime loginDate;
 
